@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 서비스 리스트</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            color: #1a237e;
+            font-size: 2.8em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+            font-weight: 700;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+            margin-top: 30px;
+        }
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        thead th {
+            background-color: #3949ab;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1em;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        thead tr {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        thead tr th:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px; }
+        thead tr th:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+
+        tbody tr {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        tbody tr:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        td {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        td:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px; }
+        td:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+
+        a {
+            color: #3f51b5;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #1a237e;
+            text-decoration: underline;
+        }
+        .service-name {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+        }
+        .service-description {
+            color: #666;
+            font-size: 0.95em;
+        }
+        .service-strength {
+            color: #00796b;
+            font-style: italic;
+        }
+        .category-header {
+            background-color: #78909c;
+            color: white;
+            font-size: 1.5em;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .link-icon {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI 서비스 리스트</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>서비스명</th>
+                    <th>설명</th>
+                    <th>강점</th>
+                    <th>링크</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="category-header" colspan="4">챗봇</td>
+                </tr>
+                <tr>
+                    <td class="service-name">ChatGPT</td>
+                    <td class="service-description">범용 대화형 생성 AI</td>
+                    <td class="service-strength">전방위 활용, 코드/문서 작성 강점</td>
+                    <td><a href="https://chat.openai.com" target="_blank"><span class="link-icon">🔗</span>chat.openai.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Gemini</td>
+                    <td class="service-description">구글의 멀티모달 AI</td>
+                    <td class="service-strength">검색·유튜브·구글 서비스 연계</td>
+                    <td><a href="https://gemini.google.com" target="_blank"><span class="link-icon">🔗</span>gemini.google.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">DeepSeek</td>
+                    <td class="service-description">중국 기반 LLM</td>
+                    <td class="service-strength">저비용, 빠른 추론</td>
+                    <td><a href="https://www.deepseek.com" target="_blank"><span class="link-icon">🔗</span>www.deepseek.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Grok</td>
+                    <td class="service-description">X(트위터) AI</td>
+                    <td class="service-strength">실시간 소셜데이터 반영</td>
+                    <td><a href="https://x.ai" target="_blank"><span class="link-icon">🔗</span>x.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Character.ai</td>
+                    <td class="service-description">캐릭터 기반 대화형 AI</td>
+                    <td class="service-strength">다양한 페르소나 역할극</td>
+                    <td><a href="https://character.ai" target="_blank"><span class="link-icon">🔗</span>character.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Perplexity</td>
+                    <td class="service-description">AI 검색엔진</td>
+                    <td class="service-strength">실시간 검색, 출처 기반 신뢰성</td>
+                    <td><a href="https://www.perplexity.ai" target="_blank"><span class="link-icon">🔗</span>www.perplexity.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Claude</td>
+                    <td class="service-description">Anthropic 챗봇</td>
+                    <td class="service-strength">글쓰기·요약 강점</td>
+                    <td><a href="https://claude.ai" target="_blank"><span class="link-icon">🔗</span>claude.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">JanitorAI</td>
+                    <td class="service-description">캐릭터/역할극 특화</td>
+                    <td class="service-strength">자유로운 RP 대화</td>
+                    <td><a href="https://janitorai.com" target="_blank"><span class="link-icon">🔗</span>janitorai.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Doubao</td>
+                    <td class="service-description">ByteDance AI</td>
+                    <td class="service-strength">중국 시장 최적화</td>
+                    <td><a href="https://doubao.com" target="_blank"><span class="link-icon">🔗</span>doubao.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Kimi</td>
+                    <td class="service-description">Moonshot AI</td>
+                    <td class="service-strength">긴 문서 처리 강점</td>
+                    <td><a href="https://kimi.moonshot.cn" target="_blank"><span class="link-icon">🔗</span>kimi.moonshot.cn</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Searart.AI</td>
+                    <td class="service-description">AI 아트 기반 챗봇</td>
+                    <td class="service-strength">예술적 맥락 생성</td>
+                    <td><a href="https://searart.ai" target="_blank"><span class="link-icon">🔗</span>searart.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Qwen3</td>
+                    <td class="service-description">알리바바 LLM</td>
+                    <td class="service-strength">중국어 최적화</td>
+                    <td><a href="https://qwen.ai" target="_blank"><span class="link-icon">🔗</span>qwen.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Crushon AI</td>
+                    <td class="service-description">연애·캐릭터 대화</td>
+                    <td class="service-strength">감정적 교감 특화</td>
+                    <td><a href="https://crushon.ai" target="_blank"><span class="link-icon">🔗</span>crushon.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Adot</td>
+                    <td class="service-description">맞춤형 챗봇</td>
+                    <td class="service-strength">컨시어지 서비스</td>
+                    <td><a href="https://adot.ai" target="_blank"><span class="link-icon">🔗</span>adot.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Poe</td>
+                    <td class="service-description">챗봇 허브</td>
+                    <td class="service-strength">여러 AI 모델 통합</td>
+                    <td><a href="https://poe.com" target="_blank"><span class="link-icon">🔗</span>poe.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Hailuo AI</td>
+                    <td class="service-description">중국어 챗봇</td>
+                    <td class="service-strength">현지 최적화</td>
+                    <td><a href="https://hailuoai.com" target="_blank"><span class="link-icon">🔗</span>hailuoai.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Candy.ai</td>
+                    <td class="service-description">AI 연애 시뮬레이션</td>
+                    <td class="service-strength">친밀 대화 강점</td>
+                    <td><a href="https://candy.ai" target="_blank"><span class="link-icon">🔗</span>candy.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">JuicyChat</td>
+                    <td class="service-description">캐주얼 대화형 AI</td>
+                    <td class="service-strength">오락성 강점</td>
+                    <td><a href="https://juicychat.ai" target="_blank"><span class="link-icon">🔗</span>juicychat.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Joi</td>
+                    <td class="service-description">AI 연인·동반자</td>
+                    <td class="service-strength">감정 교감 대화 특화</td>
+                    <td><a href="https://joi.ai" target="_blank"><span class="link-icon">🔗</span>joi.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Monica</td>
+                    <td class="service-description">AI 개인 비서</td>
+                    <td class="service-strength">일정·업무 보조</td>
+                    <td><a href="https://monica.im" target="_blank"><span class="link-icon">🔗</span>monica.im</a></td>
+                </tr>
+                <tr>
+                    <td class="category-header" colspan="4">이미지</td>
+                </tr>
+                <tr>
+                    <td class="service-name">remove.bg</td>
+                    <td class="service-description">이미지 배경 제거</td>
+                    <td class="service-strength">원클릭 배경 제거</td>
+                    <td><a href="https://www.remove.bg" target="_blank"><span class="link-icon">🔗</span>www.remove.bg</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">PolyBuzz</td>
+                    <td class="service-description">이미지 변환/생성</td>
+                    <td class="service-strength">다양한 스타일 생성</td>
+                    <td><a href="https://www.polybuzz.com" target="_blank"><span class="link-icon">🔗</span>www.polybuzz.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Pixelcut</td>
+                    <td class="service-description">전자상거래 최적화 이미지 편집</td>
+                    <td class="service-strength">배경·상품 컷 제작</td>
+                    <td><a href="https://pixelcut.ai" target="_blank"><span class="link-icon">🔗</span>pixelcut.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Midjourney</td>
+                    <td class="service-description">텍스트→이미지</td>
+                    <td class="service-strength">예술적 고퀄리티 이미지</td>
+                    <td><a href="https://midjourney.com" target="_blank"><span class="link-icon">🔗</span>midjourney.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Photoroom</td>
+                    <td class="service-description">이미지 배경 편집</td>
+                    <td class="service-strength">상업·마케팅 최적화</td>
+                    <td><a href="https://photoroom.com" target="_blank"><span class="link-icon">🔗</span>photoroom.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Civitai</td>
+                    <td class="service-description">오픈소스 모델 공유</td>
+                    <td class="service-strength">LoRA·모델 허브</td>
+                    <td><a href="https://civitai.com" target="_blank"><span class="link-icon">🔗</span>civitai.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Cutout.pro</td>
+                    <td class="service-description">이미지/영상 편집</td>
+                    <td class="service-strength">배경 제거·합성</td>
+                    <td><a href="https://www.cutout.pro" target="_blank"><span class="link-icon">🔗</span>www.cutout.pro</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Leonardo.Ai</td>
+                    <td class="service-description">게임·콘텐츠용 이미지</td>
+                    <td class="service-strength">콘셉트 아트 강점</td>
+                    <td><a href="https://leonardo.ai" target="_blank"><span class="link-icon">🔗</span>leonardo.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Remaker</td>
+                    <td class="service-description">이미지·비디오 합성</td>
+                    <td class="service-strength">얼굴 교체·편집</td>
+                    <td><a href="https://remaker.ai" target="_blank"><span class="link-icon">🔗</span>remaker.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Ourdream.ai</td>
+                    <td class="service-description">간단한 이미지 생성</td>
+                    <td class="service-strength">손쉬운 AI 그림</td>
+                    <td><a href="https://ourdream.ai" target="_blank"><span class="link-icon">🔗</span>ourdream.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="category-header" colspan="4">음악</td>
+                </tr>
+                <tr>
+                    <td class="service-name">Suno</td>
+                    <td class="service-description">AI 음악 생성</td>
+                    <td class="service-strength">작곡·가사 모두 지원</td>
+                    <td><a href="https://suno.ai" target="_blank"><span class="link-icon">🔗</span>suno.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="category-header" colspan="4">음성</td>
+                </tr>
+                <tr>
+                    <td class="service-name">ElevenLabs</td>
+                    <td class="service-description">음성 합성/더빙</td>
+                    <td class="service-strength">자연스러운 TTS</td>
+                    <td><a href="https://elevenlabs.io" target="_blank"><span class="link-icon">🔗</span>elevenlabs.io</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Lovable</td>
+                    <td class="service-description">앱 자동생성에 음성 지원</td>
+                    <td class="service-strength">인터랙티브 앱 제작</td>
+                    <td><a href="https://lovable.dev" target="_blank"><span class="link-icon">🔗</span>lovable.dev</a></td>
+                </tr>
+                <tr>
+                    <td class="category-header" colspan="4">코드</td>
+                </tr>
+                <tr>
+                    <td class="service-name">Google AI Studio</td>
+                    <td class="service-description">모델 개발/실험</td>
+                    <td class="service-strength">개발자 친화</td>
+                    <td><a href="https://aistudio.google.com" target="_blank"><span class="link-icon">🔗</span>aistudio.google.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Cursor</td>
+                    <td class="service-description">AI 코드 편집기</td>
+                    <td class="service-strength">자동완성·디버깅</td>
+                    <td><a href="https://cursor.sh" target="_blank"><span class="link-icon">🔗</span>cursor.sh</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Replit</td>
+                    <td class="service-description">AI IDE</td>
+                    <td class="service-strength">실시간 협업, 코드 추천</td>
+                    <td><a href="https://replit.com" target="_blank"><span class="link-icon">🔗</span>replit.com</a></td>
+                </tr>
+                <tr>
+                    <td class="category-header" colspan="4">문서</td>
+                </tr>
+                <tr>
+                    <td class="service-name">NotebookLM</td>
+                    <td class="service-description">구글 문서 기반 요약</td>
+                    <td class="service-strength">노트·연구 지원</td>
+                    <td><a href="https://notebooklm.google" target="_blank"><span class="link-icon">🔗</span>notebooklm.google</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">QuillBot</td>
+                    <td class="service-description">문법·패러프레이징</td>
+                    <td class="service-strength">글쓰기 교정 특화</td>
+                    <td><a href="https://quillbot.com" target="_blank"><span class="link-icon">🔗</span>quillbot.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Gamma</td>
+                    <td class="service-description">프리젠테이션 자동생성</td>
+                    <td class="service-strength">슬라이드 제작</td>
+                    <td><a href="https://gamma.app/ko" target="_blank"><span class="link-icon">🔗</span>gamma.app/ko</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Manus</td>
+                    <td class="service-description">문서 협업 AI</td>
+                    <td class="service-strength">자동 작성·편집</td>
+                    <td><a href="https://manus.ai" target="_blank"><span class="link-icon">🔗</span>manus.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Google Labs</td>
+                    <td class="service-description">구글 실험적 프로젝트</td>
+                    <td class="service-strength">신기능 테스트</td>
+                    <td><a href="https://labs.google" target="_blank"><span class="link-icon">🔗</span>labs.google</a></td>
+                </tr>
+                <tr>
+                    <td class="category-header" colspan="4">영상</td>
+                </tr>
+                <tr>
+                    <td class="service-name">KlingAI</td>
+                    <td class="service-description">텍스트→비디오</td>
+                    <td class="service-strength">TikTok 연계</td>
+                    <td><a href="https://klingai.com" target="_blank"><span class="link-icon">🔗</span>klingai.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Cutout.pro</td>
+                    <td class="service-description">영상 배경 편집</td>
+                    <td class="service-strength">편집 자동화</td>
+                    <td><a href="https://www.cutout.pro" target="_blank"><span class="link-icon">🔗</span>www.cutout.pro</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">VEED</td>
+                    <td class="service-description">영상 편집 플랫폼</td>
+                    <td class="service-strength">초보자 친화적</td>
+                    <td><a href="https://www.veed.io" target="_blank"><span class="link-icon">🔗</span>www.veed.io</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">Remaker</td>
+                    <td class="service-description">얼굴 교체·비디오 합성</td>
+                    <td class="service-strength">엔터테인먼트 강점</td>
+                    <td><a href="https://remaker.ai" target="_blank"><span class="link-icon">🔗</span>remaker.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="category-header" colspan="4">도구</td>
+                </tr>
+                <tr>
+                    <td class="service-name">Turboscribe</td>
+                    <td class="service-description">자동 전사</td>
+                    <td class="service-strength">다언어 자막 생성</td>
+                    <td><a href="https://turboscribe.ai" target="_blank"><span class="link-icon">🔗</span>turboscribe.ai</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">ZeroGPT</td>
+                    <td class="service-description">AI 글 탐지기</td>
+                    <td class="service-strength">AI 생성 여부 판별</td>
+                    <td><a href="https://www.zerogpt.com" target="_blank"><span class="link-icon">🔗</span>www.zerogpt.com</a></td>
+                </tr>
+                <tr>
+                    <td class="service-name">DeepAI</td>
+                    <td class="service-description">다양한 AI API</td>
+                    <td class="service-strength">이미지·텍스트 처리</td>
+                    <td><a href="https://deepai.org" target="_blank"><span class="link-icon">🔗</span>deepai.org</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
